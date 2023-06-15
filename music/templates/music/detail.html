@@ -8,7 +8,7 @@
   <h3>{{album.album_title}} by {{album.artist_name}}</h3>
   <img src="{{album.album_logo}}">
     <ul>
-        {%for song in allsong %}
+        {%for song in album.song_set.all %}
         <li>{{song.song_title}}.{{song.file_type}}</li>
         {%endfor%}
     </ul>

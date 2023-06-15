@@ -8,5 +8,4 @@ def index(requist):
 
 def detail(requist, album_id):
     album = get_object_or_404(Album, pk=album_id)
-    allsong = album.song_set.all()
-    return render(requist, 'music/detail.html', {'allsong': allsong, 'album': album})
+    return render(requist, 'music/detail.html', {'album': album})
