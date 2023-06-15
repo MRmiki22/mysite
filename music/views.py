@@ -5,5 +5,5 @@ from django.http import HttpResponse
 def index(requist):
     return HttpResponse("<h2> Album list </h2>")
 
-def detail(requist):
-    return HttpResponse("list of misuc")
+def detail(requist, album_id):
+    return HttpResponse("<h2> Music list </h2>")
