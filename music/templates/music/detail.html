@@ -5,10 +5,11 @@
     <title>music list</title>
 </head>
 <body>
-  <h3>List of music in {{album.album_title}} by {{album.artist_name}}</h3>
+  <h3>{{album.album_title}} by {{album.artist_name}}</h3>
+  <img src="{{album.album_logo}}">
     <ul>
         {%for song in allsong %}
-        <li>{{song.song_title}}</li>
+        <li>{{song.song_title}}.{{song.file_type}}</li>
         {%endfor%}
     </ul>
 </body>
