@@ -13,6 +13,6 @@ class Song(models.Model):
     album = models.ForeignKey(Album, on_delete= models.CASCADE)
     song_title = models.CharField(max_length=50, default= 0)
     file_type = models.CharField(max_length=10, default= 0)
-
+    is_fav = models.BooleanField(default = False)
     def __str__(self):
         return self.song_title + '.' + self.file_type;
