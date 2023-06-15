@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>music list</title>
+</head>
+<body>
+  <h3>List of music in {{album.album_title}}  by artist {{album.artist_name}}</h3>
+    <ul>
+        {%for song in allsong %}
+        <li>{{song.song_title}}</li>
+        {%endfor%}
+    </ul>
+</body>
+</html>
