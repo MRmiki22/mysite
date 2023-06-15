@@ -7,10 +7,18 @@
 <body>
   <h3>{{album.album_title}} by {{album.artist_name}}</h3>
   <img src="{{album.album_logo}}">
-    <ul>
+    <form action="{%url 'music:fav' album.id %}" method="post">
+        {%csrf_token%}
         {%for song in album.song_set.all %}
-        <li>{{song.song_title}}.{{song.file_type}}</li>
+        <input type="radio" id = "song{{forloop.counter}}" name = "song" value="{{song.id}}"/>
+        <label for = "song{{forloop.counter}}">
+            {{song.song_title}}
+            {%if song.is_fav%}
+            fav
+            {%endif%}
+        </label><br>
         {%endfor%}
-    </ul>
+        <input type="submit" value="fav">
+    </form>
 </body>
 </html>
