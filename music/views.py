@@ -6,9 +6,8 @@ from .models import Album, Song
 
 def index(requist):
     allAlbum = Album.objects.all()
-    template = loader.get_template('music/index.html')
-    context = {'allAlbum' : allAlbum,}
-    return HttpResponse(template.render(context, requist))
+    context = {'allAlbum': allAlbum}
+    return render(requist, 'music/index.html', context)
 
 def detail(requist, album_id):
     allSong = Song.objects.filter(album = album_id)
