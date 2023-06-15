@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Music App</title>
+</head>
+<body>
+    <h3> Album list</h3>
+    {%if allAlbum%}
+    <ul>
+        {%for album in allAlbum %}
+        <li><a href="/music/{{album.id}}" >{{album.album_title}}</a></li>
+        {%endfor%}
+    </ul>
+    {%else%}
+        <h3>No album yet</h3>
+    {%end if%}
+</body>
+</html>
