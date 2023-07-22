@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+{%load static%}
+{% static "music/style.css" as back %}
 <head>
     <meta charset="UTF-8">
     <title>Music App</title>
 </head>
 <body>
+    <link rel="stylesheet" type="text/css" href="{{back}}"/>
     <h3> Album list</h3>
     {%if allAlbum%}
     <ul>
